@@ -11,10 +11,10 @@ $multiplesOfThreeOrFive = new MultiplesOfThreeOrFive();
 $multiplesOfThreeOrFiveAnswer = $multiplesOfThreeOrFive->findSum(1000);
 
 printf("
-==============================
-|           Task 1           |
-==============================
+===============================
+|          Problem 1          |
+===============================
 Input: 1000
 Answer: %d
-==============================
+===============================
 ", $multiplesOfThreeOrFiveAnswer);
