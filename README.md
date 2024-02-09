@@ -8,3 +8,4 @@ If the solutions helped you, or you liked them, leave a star or follow me for mo
 ## Solved problems
 
 - [X] [Multiples of 3 or 5](https://projecteuler.net/problem=1)
+- [X] [Even Fibonacci Numbers](https://projecteuler.net/problem=2)
