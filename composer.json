@@ -1,0 +1,40 @@
+{
+  "name": "wawoxe/projecteuler",
+  "description": "ProjectEuler solutions made by wawoxe",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Mykyta Melnyk",
+      "email": "wawoxe@proton.me"
+    }
+  ],
+  "require": {
+    "php": ">=8.3"
+  },
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "Wawoxe\\ProjectEuler\\": "src/",
+      "Wawoxe\\ProjectEuler\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "composer install --working-dir=tools/php-cs-fixer",
+      "composer install --working-dir=tools/phpstan",
+      "composer install --working-dir=tools/phpmd"
+    ],
+    "phpcs:fix": "tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src",
+    "phpstan:analyse": "tools/phpstan/vendor/bin/phpstan analyse -c tools/phpstan/phpstan.neon",
+    "phpmd:analyse": "tools/phpmd/vendor/bin/phpmd src ansi tools/phpmd/rulesets.xml --strict",
+    "code:analyse": [
+      "@phpcs:fix",
+      "@phpstan:analyse",
+      "@phpmd:analyse"
+    ],
+    "test": "./vendor/bin/phpunit --bootstrap vendor/autoload.php tests"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11"
+  }
+}
