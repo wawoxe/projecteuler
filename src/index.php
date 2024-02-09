@@ -8,7 +8,7 @@ require_once dirname(__DIR__).'/vendor/autoload.php';
 
 // https://projecteuler.net/problem=1
 $multiplesOfThreeOrFive = new MultiplesOfThreeOrFive();
-$multiplesOfThreeOrFiveAnswer = $multiplesOfThreeOrFive->findSum(1000);
+$multiplesOfThreeOrFiveAnswer = $multiplesOfThreeOrFive->findSumBelowLimit(1000);
 
 printf("
 ===============================

@@ -13,25 +13,25 @@ class MultiplesOfThreeOrFiveTest extends TestCase
     {
         $multipleOfThreeOrFive = new MultiplesOfThreeOrFive();
 
-        $this->assertSame(0, $multipleOfThreeOrFive->findSum(-4));
-        $this->assertSame(0, $multipleOfThreeOrFive->findSum(0));
-        $this->assertSame(0, $multipleOfThreeOrFive->findSum(2));
+        $this->assertSame(0, $multipleOfThreeOrFive->findSumBelowLimit(-4));
+        $this->assertSame(0, $multipleOfThreeOrFive->findSumBelowLimit(0));
+        $this->assertSame(0, $multipleOfThreeOrFive->findSumBelowLimit(2));
     }
 
     public function testFindSumWithLimitEqualThree(): void
     {
         $multipleOfThreeOrFive = new MultiplesOfThreeOrFive();
 
-        $this->assertSame(0, $multipleOfThreeOrFive->findSum(3));
+        $this->assertSame(0, $multipleOfThreeOrFive->findSumBelowLimit(3));
     }
 
     public function testFindSumWithLimitMoreThanThree(): void
     {
         $multipleOfThreeOrFive = new MultiplesOfThreeOrFive();
 
-        $this->assertSame(3, $multipleOfThreeOrFive->findSum(4));
-        $this->assertSame(23, $multipleOfThreeOrFive->findSum(10));
-        $this->assertSame(20850, $multipleOfThreeOrFive->findSum(300));
-        $this->assertSame(233168, $multipleOfThreeOrFive->findSum(1000));
+        $this->assertSame(3, $multipleOfThreeOrFive->findSumBelowLimit(4));
+        $this->assertSame(23, $multipleOfThreeOrFive->findSumBelowLimit(10));
+        $this->assertSame(20850, $multipleOfThreeOrFive->findSumBelowLimit(300));
+        $this->assertSame(233168, $multipleOfThreeOrFive->findSumBelowLimit(1000));
     }
 }
